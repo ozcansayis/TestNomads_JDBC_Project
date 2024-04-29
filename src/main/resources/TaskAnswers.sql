@@ -280,5 +280,3 @@ WHERE hire_date BETWEEN '1992-04-01' AND '1992-04-30';
 SELECT DISTINCT dept_no
 FROM dept_emp
 WHERE emp_no = '10102';
-
-
