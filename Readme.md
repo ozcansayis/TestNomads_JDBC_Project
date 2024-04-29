@@ -44,28 +44,6 @@ This README file contains various SQL queries for a sample `employees` schema. T
 
 ![employees-schema.png](src/main/resources/img/employees-schema.png)
 
-##	1. List all employees in department '`D001`'.
-```SQL
-SELECT *
-FROM employees
-INNER JOIN dept_emp ON employees.emp_no = dept_emp.emp_no
-WHERE dept_no = 'D001';
-```
-
-##	2. List all employees in '`Human Resources`' department.
-```SQL
-SELECT employees.*
-FROM employees
-INNER JOIN dept_emp ON employees.emp_no = dept_emp.emp_no
-INNER JOIN departments ON dept_emp.dept_no = departments.dept_no
-WHERE departments.dept_name = 'Human Resources';
-```
-
-##	3. Calculate the average salary of all employees
-```SQL
-SELECT AVG(salary) AS average_salary
-FROM salaries;
-```
 
 ##	4. Calculate the average salary of all employees with gender "`M`"
 ```SQL
