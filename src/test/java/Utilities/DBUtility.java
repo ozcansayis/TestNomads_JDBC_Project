@@ -8,8 +8,7 @@ public class DBUtility {
     public static Connection baglanti;
     public static Statement sorguEkrani;
 
-    public static List<List<String>> getListData(String sorgu)
-    {
+    public static List<List<String>> getListData(String sorgu){
         List<List<String>> tablo=new ArrayList<>();
 
         try {
@@ -43,7 +42,7 @@ public class DBUtility {
             System.out.println(ex.getMessage());
         }
         finally {
-            DBConnectionClose();  // hata olsa d aolmasa da çalış
+            DBConnectionClose();  // hata olsa da olmasa da çalış
         }
 
         return tablo;
@@ -65,8 +64,7 @@ public class DBUtility {
         }
     }
 
-    public static void DBConnectionClose()
-    {
+    public static void DBConnectionClose() {
         try {
             baglanti.close();
         } catch (SQLException e) {
