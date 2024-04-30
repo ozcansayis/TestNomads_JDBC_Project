@@ -3,6 +3,7 @@ package JDBC;
 import org.testng.annotations.Test;
 
 import java.sql.ResultSet;
+import java.sql.ResultSetMetaData;
 import java.sql.SQLException;
 
 public class Ayse extends _JDBCParent {
@@ -79,10 +80,12 @@ public class Ayse extends _JDBCParent {
                 "left join titles ON titles.emp_no=salaries.emp_no " +
                 "where first_name='Annemarie' and last_name='Redmiles' and salaries.from_date between titles.from_date and titles.to_date");
         rs.last();
-        int sonSatirNo = rs.getRow();
-        for (int i = 1; i <= sonSatirNo; i++) {
+        int lastRowNo = rs.getRow();
+        ResultSetMetaData rsmd = rs.getMetaData();
+        int numberOfColumns = rsmd.getColumnCount();
+        for (int i = 1; i <= lastRowNo; i++) {
             rs.absolute(i);
-            for (int j = 1; j <= 9; j++) {
+            for (int j = 1; j <= numberOfColumns; j++) {
                 System.out.print(rs.getString(j) + " ");
             }
             System.out.println();
@@ -100,7 +103,7 @@ public class Ayse extends _JDBCParent {
                 "left join titles ON titles.emp_no=salaries.emp_no " +
                 "where dept_emp.dept_no='d005' and salaries.from_date between titles.from_date and titles.to_date limit 1000");
         while (rs.next()) {
-            System.out.println(rs.getString("emp_no") + " | " + rs.getString("first_name") + " " + rs.getString("last_name") + " | " + rs.getString("title")+ " " + rs.getString("salary"));
+            System.out.println(rs.getString("emp_no") + " | " + rs.getString("first_name") + " " + rs.getString("last_name") + " | " + rs.getString("title") + " " + rs.getString("salary"));
         }
         DBConnectionClose();
     }
