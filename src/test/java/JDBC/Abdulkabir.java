@@ -1,10 +1,8 @@
 package JDBC;
 
-import Utilities.DBUtility;
 import org.testng.annotations.Test;
 
-import java.sql.ResultSet;
-import java.sql.ResultSetMetaData;
+import java.sql.*;
 import java.sql.SQLException;
 
 public class Abdulkabir extends _JDBCParent {
@@ -21,11 +19,11 @@ public class Abdulkabir extends _JDBCParent {
         }
         System.out.println();
 
-        while (rs.next()){
-            for (int i = 1; i <= rsmd.getColumnCount() ; i++)
-                System.out.print(rs.getString(i)+"\t");
-                System.out.println();
-            }
+        while (rs.next()) {
+            for (int i = 1; i <= rsmd.getColumnCount(); i++)
+                System.out.print(rs.getString(i) + "\t");
+            System.out.println();
+        }
         DBConnectionClose();
     }
     //*******************************************************************************************
@@ -36,19 +34,19 @@ public class Abdulkabir extends _JDBCParent {
         DBConnectionOpen();
         ResultSet rs = sorguEkrani.executeQuery("select de.dept_no, AVG(s.salary) AS average_salary FROM dept_emp de left join salaries s ON de.emp_no = s.emp_no GROUP BY de.dept_no");
         ResultSetMetaData rsmd = rs.getMetaData();
-
         for (int i = 1; i <= rsmd.getColumnCount(); i++) {
             System.out.print(rsmd.getColumnName(i) + "\t");
         }
         System.out.println();
 
-        while (rs.next()){
-            for (int i = 1; i <= rsmd.getColumnCount() ; i++)
-                System.out.print(rs.getString(i)+"\t");
+        while (rs.next()) {
+            for (int i = 1; i <= rsmd.getColumnCount(); i++)
+                System.out.print(rs.getString(i) + "\t");
             System.out.println();
         }
         DBConnectionClose();
     }
+
     //*******************************************************************************************
     @Test
     public void test_10() throws SQLException {
@@ -62,13 +60,14 @@ public class Abdulkabir extends _JDBCParent {
         }
         System.out.println();
 
-        while (rs.next()){
-            for (int i = 1; i <= rsmd.getColumnCount() ; i++)
-                System.out.print(rs.getString(i)+"\t");
+        while (rs.next()) {
+            for (int i = 1; i <= rsmd.getColumnCount(); i++)
+                System.out.print(rs.getString(i) + "\t");
             System.out.println();
         }
         DBConnectionClose();
     }
+
     //*******************************************************************************************
     @Test
     public void test_11() throws SQLException {
@@ -89,6 +88,7 @@ public class Abdulkabir extends _JDBCParent {
         }
         DBConnectionClose();
     }
+
     //*******************************************************************************************
     @Test
     public void test_29() throws SQLException {
@@ -108,6 +108,7 @@ public class Abdulkabir extends _JDBCParent {
         }
         DBConnectionClose();
     }
+
     //*******************************************************************************************
     @Test
     public void test_30() throws SQLException {
@@ -128,6 +129,7 @@ public class Abdulkabir extends _JDBCParent {
         DBConnectionClose();
 
     }
+
     //*******************************************************************************************
     @Test
     public void test_35() throws SQLException {
@@ -147,6 +149,7 @@ public class Abdulkabir extends _JDBCParent {
         }
         DBConnectionClose();
     }
+
     //*******************************************************************************************
     @Test
     public void test_41() throws SQLException {

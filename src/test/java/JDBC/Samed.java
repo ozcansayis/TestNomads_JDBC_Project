@@ -2,8 +2,7 @@ package JDBC;
 
 import org.testng.annotations.Test;
 
-import java.sql.ResultSet;
-import java.sql.ResultSetMetaData;
+import java.sql.*;
 import java.sql.SQLException;
 
 public class Samed extends _JDBCParent {
@@ -86,7 +85,6 @@ public class Samed extends _JDBCParent {
         while (rs.next()) {
             System.out.print(rs.getString(1));
             System.out.print("  " + rs.getString(2));
-
         }
         System.out.println();
         DBConnectionClose();
@@ -104,11 +102,10 @@ public class Samed extends _JDBCParent {
         System.out.println();
         while (rs.next()) {
             for (int i = 1; i <= columnCount; i++) {
-                System.out.print(rs.getString(i)+" ");
+                System.out.print(rs.getString(i) + " ");
             }
             System.out.println();
         }
         DBConnectionClose();
     }
-
 }
