@@ -31,7 +31,7 @@ To run the tests in this project, you will need:
 - An Integrated Development Environment (IDE) like IntelliJ IDEA or Eclipse.
 - TestNG for organizing and running tests.
 - Cucumber for behavior-driven development (BDD).
--JDBC to run SQL queries.
+- JDBC to run SQL queries.
 
 
 ## Installation & Running Tests
