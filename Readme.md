@@ -16,13 +16,13 @@ In this project, we will automate the SQL queries we implement in a database use
 
 
 ## Team Members
-| Name                    | Role                      | GitHub                                                      | E-posta                          |
-|-------------------------|---------------------------|-------------------------------------------------------------|--------------------------        |
-| Abdulkabir Türkoğlu     | QA Engineer               | [AbdulkabirTurkoglu](https://github.com/AbdulkabirTurkoglu) | turkogluabdulkabir@gmail.com     |
-| Ümit Eser               | QA Engineer               | [umiteser](https://github.com/umiteser)                     | eser_umit@hotmail.com            |
-| Ayşe İhtiyar            | QA Engineer               | [ayseihtiyar](https://github.com/ayseihtiyar)               |                    |
-| Samed Yekenkurul        | QA Engineer   | [samfrmda01](https://github.com/samfrmda01)                 |                                  |
-| Mehmet Özcan Sayış      | Team Lead & QA Engineer               |  [mehmetozcansayis](https://github.com/ozcansayis)          | ozcansayis@gmail.com             |
+| Name                    | Role                      | GitHub                                                      |
+|-------------------------|---------------------------|-------------------------------------------------------------|
+| Abdulkabir Türkoğlu     | QA Engineer               | [AbdulkabirTurkoglu](https://github.com/AbdulkabirTurkoglu) |
+| Ümit Eser               | QA Engineer               | [umiteser](https://github.com/umiteser)                     |
+| Ayşe İhtiyar            | QA Engineer               | [ayseihtiyar](https://github.com/ayseihtiyar)               |
+| Samed Yekenkurul        | QA Engineer               | [samfrmda01](https://github.com/samfrmda01)                 |
+| Mehmet Özcan Sayış      | Team Lead & QA Engineer   |  [mehmetozcansayis](https://github.com/ozcansayis)          |
 
 
 ## Prerequisites
